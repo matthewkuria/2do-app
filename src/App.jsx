@@ -9,23 +9,19 @@ function App() {
   return (
     <>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
+      <h1>2-Do-List-App</h1>
+
         
       </div>
-      <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      <form action="">
+        <label htmlFor="addItem">Add an Item</label>
+        <input type="text" name="addItem" id="" />
+        <button type="submit" className='btn'><img src="../public/add.png" alt=""  className="btn--img"/></button>
+      </form>
+       
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      
     </>
   )
 }
