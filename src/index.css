@@ -28,20 +28,6 @@ h1 {
   line-height: 1.1;
 }
 
-.btn{
-  background-color: white;
-  padding:10px 20px;
-  border: none;
-  border-radius: 50%;
-  color:white;
-}
-.btn--img:hover {
-  border-color: #30b309;
-}
-.btn--img{
-  width:30px;
-  height: 30px;
-}
 
 @media (prefers-color-scheme: light) {
   :root {
