@@ -48,7 +48,9 @@ function App(props) {
         role="list"
         className="todo-list stack-large stack-exception"
         aria-labelledby="list-heading">
+
         <Todo  
+        // add props to the TOdo components
         name = "Eat"
         completed = {true} 
         id="todo-0"
