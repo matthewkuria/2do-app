@@ -1,7 +1,7 @@
 import React from "react";
 
 function Todo(props){
-  
+  // consuming props from the app.jsx
     return(
         <li className="todo stack-small">
           <div className="c-cb">
