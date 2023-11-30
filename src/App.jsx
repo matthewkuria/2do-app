@@ -1,4 +1,3 @@
-import { nanoid } from "nanoid";
 import React, { useState } from "react";
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
@@ -13,7 +12,7 @@ function App(props) {
 
   function addTask(name) {
     // we will make a newTask object to add to the array
-    const newTask = { id: `todo-${nanoid()}`, name, completed: false };
+    const newTask = { name, completed: false };
     setTasks([...tasks, newTask]);
   }
   function toggleTaskCompleted(id) {
