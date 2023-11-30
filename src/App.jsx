@@ -52,7 +52,7 @@ function App(props) {
 
   return (
     <div className="todoapp stack-large">
-      <h1>To-do-app</h1>
+      <h1 className="app--title">To-do-app</h1>
      <Form addTask={addTask} />
       <div className="filters btn-group stack-exception">
         <FilterButton />
