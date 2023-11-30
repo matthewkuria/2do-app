@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { nanoid } from "nanoid";
+import React, { useState } from "react";
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -8,16 +9,27 @@ import Todo from "./components/Todo";
 
 
 function App(props) {
+  const [tasks, setTasks] = useState(props.tasks);
+
   function addTask(name) {
-    alert(name);
+    // we will make a newTask object to add to the array
+    const newTask = { id: `todo-${nanoid()}`, name, completed: false };
+    setTasks([...tasks, newTask]);
   }
   
-  const taskList = props.tasks?.map(task => <Todo 
+  
+  const taskList = tasks.map(task =>
+  <Todo 
     name={task.name}
     id ={task.id}
     completed= {task.completed}
     key= {task.id} //Help react keep track of tasks
-    />)
+    />
+    )
+    //Count the number of tasks added
+    const tasksNoun = taskList.length !== 1 ? "tasks" : "task";
+    const headingText = `${taskList.length} ${tasksNoun} remaining`;
+
   return (
     <div className="todoapp stack-large">
       <h1>To-do-app</h1>
@@ -28,7 +40,7 @@ function App(props) {
         <FilterButton />
 
       </div>
-      <h2 id="list-heading">3 tasks remaining</h2>
+      <h2 id="list-heading">{headingText}</h2>
       <ul
         role="list"
         className="todo-list stack-large stack-exception"
