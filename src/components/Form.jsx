@@ -2,7 +2,7 @@ import React, {useState} from "react";
 
 export default function Form(props){
   const [name, setName] = useState("");
-  
+
   function handleChange(e){  
     setName(e.target.value)
   }
@@ -12,6 +12,8 @@ export default function Form(props){
     props.addTask(name);
     setName("");
   }
+ 
+  
   return(     
         <form  onSubmit={handleSubmit}>
         <h2 className="label-wrapper">
