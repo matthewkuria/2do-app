@@ -1,8 +1,12 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is built to help the user perform the following:
 
-Currently, two official plugins are available:
+As a user, I can
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+read a list of tasks.
+add a task using the mouse or keyboard.
+mark any task as completed, using the mouse or keyboard.
+delete any task, using the mouse or keyboard.
+edit any task, using the mouse or keyboard.
+view a specific subset of tasks: All tasks, only the active task, or only the completed tasks.
